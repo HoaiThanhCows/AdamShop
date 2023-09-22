@@ -48,28 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Announcement.cs" />
-    <Compile Include="Models\AnnouncementUser.cs" />
-    <Compile Include="Models\AppRole.cs" />
-    <Compile Include="Models\AppUser.cs" />
-    <Compile Include="Models\Color.cs" />
-    <Compile Include="Models\ContactDetail.cs" />
-    <Compile Include="Models\Error.cs" />
-    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Abstract\Auditable.cs" />
+    <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Models\Footer.cs" />
-    <Compile Include="Models\Function.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Page.cs" />
-    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PostCategory.cs" />
     <Compile Include="Models\PostCategory.cs" />
     <Compile Include="Models\PostTag.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategory.cs" />
-    <Compile Include="Models\ProductImage.cs" />
-    <Compile Include="Models\ProductQuantity.cs" />
     <Compile Include="Models\ProductTag.cs" />
-    <Compile Include="Models\Size.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Models\SupportOnline.cs" />
     <Compile Include="Models\SystemConfig.cs" />
@@ -80,6 +72,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TeduShop.Model.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

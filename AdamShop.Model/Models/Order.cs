@@ -40,13 +40,6 @@ namespace TeduShop.Model.Models
         public string PaymentStatus { set; get; }
         public bool Status { set; get; }
 
-        [StringLength(128)]
-        [Column(TypeName = "nvarchar")]
-        public string CustomerId { set; get; }
-
-        [ForeignKey("CustomerId")]
-        public virtual AppUser User { set; get; }
-
         public virtual ICollection<OrderDetail> OrderDetails { set; get; }
     }
 }

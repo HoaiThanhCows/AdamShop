@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Linq;
 using TeduShop.Model.Abstract;
 
 namespace TeduShop.Model.Models
@@ -24,15 +25,13 @@ namespace TeduShop.Model.Models
         public int CategoryID { set; get; }
 
         [MaxLength(256)]
-        public string ThumbnailImage { set; get; }
+        public string Image { set; get; }
 
+        public XElement MoreImages { set; get; }
         public decimal Price { set; get; }
 
-        public decimal OriginalPrice { set; get; }
 
         public decimal? PromotionPrice { set; get; }
-
-        public bool IncludedVAT { get; set; }
 
         public int? Warranty { set; get; }
 
@@ -47,11 +46,10 @@ namespace TeduShop.Model.Models
 
         public int? ViewCount { set; get; }
 
-        public string Tags { set; get; }
+
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { set; get; }
 
-        public virtual ICollection<ProductTag> ProductTags { set; get; }
     }
 }
