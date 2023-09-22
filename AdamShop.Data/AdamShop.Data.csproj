@@ -48,6 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdamShopDbContext.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +66,10 @@
     <ProjectReference Include="..\AdamShop.Common\AdamShop.Common.csproj">
       <Project>{e64cf526-aba5-4137-ad38-3c2c450c718c}</Project>
       <Name>AdamShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdamShop.Model\AdamShop.Model.csproj">
+      <Project>{0f86aea1-2047-4e94-8c2e-75d8bebd730a}</Project>
+      <Name>AdamShop.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
